@@ -17,7 +17,7 @@ TBD
 
 ## Usage
 
-```
+```bash
 # View last 10 entries and follow new ones
 tail -n 10 /var/lib/caddy/access.log | calopr
 
