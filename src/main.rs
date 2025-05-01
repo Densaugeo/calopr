@@ -33,6 +33,21 @@ struct Request {
 }
 
 fn main() {
+  #[cfg(windows)] {
+    use windows::Win32::System::Console;
+    
+    // Unsafe seems to be a requirement for anything with Windows API. I also
+    // don't want to figure out the failure modes for all these calls so just
+    // .unwrap(), Windows support isn't really a priority anyway
+    unsafe {
+      let handle = Console::GetStdHandle(Console::STD_OUTPUT_HANDLE).unwrap();
+      let mut mode = Console::CONSOLE_MODE(0);
+      Console::GetConsoleMode(handle, &mut mode).unwrap();
+      Console::SetConsoleMode(handle,
+        mode | Console::ENABLE_VIRTUAL_TERMINAL_PROCESSING).unwrap();
+    }
+  }
+  
   if std::env::args().count() > 1 {
     println!("\
 {BOLD}{BLUE}USAGE{RESET}

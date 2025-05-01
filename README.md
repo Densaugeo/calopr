@@ -9,21 +9,30 @@ Caddy Log Printer - Pretty-print Caddy's access logs
 | Platform | Supported? |
 |-|-|
 | Linux | Yes | Tested on Fedora every release. |
-| Windows | No | |
+| Windows | Yes | Occasional manual testing. Haven't noticed any obvious problems. |
 | Mac | No | |
 | x64 | Yes | |
 | ARM | No | |
 
 ## Installation
 
+Linux:
+
 ```bash
 sudo curl -L -o /usr/bin/calopr https://github.com/Densaugeo/calopr/releases/latest/download/calopr-x64-linux
 sudo chmod 755 /usr/bin/calopr
 ```
 
+Windows:
+
+Download the latest .exe from https://github.com/Densaugeo/calopr/releases/ and save it somewhere you can find it.
+
 ## Usage
 
 ```bash
+# Simplest way to view logs. Even works on Windows (with an appropriate path)
+cat /var/lib/caddy/access.log | calopr
+
 # View last 10 entries and follow new ones
 tail -n 10 /var/lib/caddy/access.log | calopr
 
