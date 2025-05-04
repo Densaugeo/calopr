@@ -7,6 +7,7 @@ install-dev:
 	
 	# Rust-cross is required because of the sad state of Fedora's ARM
 	# toolchain
+	sudo dnf install podman
 	cargo install cross --git https://github.com/cross-rs/cross
 
 build:
