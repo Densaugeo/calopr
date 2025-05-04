@@ -6,8 +6,8 @@ Caddy Log Printer - Pretty-print Caddy's access logs
 
 ## Supported Platforms
 
-| Platform | Supported? |
-|-|-|
+| Platform | Supported? | Notes |
+|-|-|-|
 | Linux | Yes | Tested on Fedora every release. |
 | Windows | Yes | Occasional manual testing. Haven't noticed any obvious problems. |
 | Mac | No | |
