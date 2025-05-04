@@ -11,17 +11,19 @@ Caddy Log Printer - Pretty-print Caddy's access logs
 | Linux | Yes | Tested on Fedora every release. |
 | Windows | Yes | Occasional manual testing. Haven't noticed any obvious problems. |
 | Mac | No | |
-| x64 | Yes | |
-| ARM | No | |
+| x64 | Yes | Tested every release. |
+| ARM | Yes | Occasional manual testing. Haven't noticed any obvious problems. |
 
 ## Installation
 
-Linux:
+Linux (x64):
 
 ```bash
 sudo curl -L -o /usr/bin/calopr https://github.com/Densaugeo/calopr/releases/latest/download/calopr-x64-linux
 sudo chmod 755 /usr/bin/calopr
 ```
+
+For Linux on ARM, see https://github.com/Densaugeo/calopr/releases/ for available ARM builds. They can be installed in the same way with the associated filename.
 
 Windows:
 
