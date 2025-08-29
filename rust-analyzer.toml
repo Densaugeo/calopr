@@ -1,3 +1,3 @@
-# Needed so cfg(windows) blocks don't ddrive rust rust-analyzer nuts
+# Needed so cfg(windows) blocks don't drive rust rust-analyzer nuts
 [diagnostics]
 disabled = ["inactive-code"]
